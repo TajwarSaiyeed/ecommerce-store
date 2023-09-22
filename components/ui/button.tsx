@@ -22,6 +22,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({className,children,d
                 transition
             `, className)}
             ref={ref}
+            {...props}
         >
             {children}
         </button>
