@@ -1,22 +1,28 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Urbanist} from 'next/font/google'
+import type {Metadata} from 'next'
+import {Urbanist} from 'next/font/google'
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
-const font = Urbanist({ subsets: ['latin'] })
+const font = Urbanist({subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Store',
-  description: 'Buy your favorite products online',
+    title: 'Ecommerce Store',
+    description: 'Buy your favorite products online',
 }
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
+                                       children,
+                                   }: {
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+        <body className={font.className}>
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
+        </html>
+    )
 }
