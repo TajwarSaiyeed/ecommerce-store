@@ -1,8 +1,7 @@
-'use client'
+"use client";
 
+import { Toaster } from "react-hot-toast";
 
-import {Toaster} from "react-hot-toast";
+const ToastProvider = () => <Toaster />;
 
-const ToastProvider = () => <Toaster/>
-
-export default ToastProvider
+export default ToastProvider;
